@@ -28,6 +28,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             $canonicalMethod = 'GET';
         }
 
+        // app_articleadmin_new
+        if ('/article/admin/new' === $pathinfo) {
+            return array (  '_controller' => 'App\\Controller\\ArticleAdminController::new',  '_route' => 'app_articleadmin_new',);
+        }
+
         // app_homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'App\\Controller\\ArticleController::homepage',  '_route' => 'app_homepage',);
